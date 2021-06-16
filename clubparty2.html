@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Club Party Registration</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Event Registration Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- //custom-theme -->
+<link href="css/styleclubparty2.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- font-awesome-icons -->
+<!-- //font-awesome-icons -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+
+<script>
+	function vegT(){
+	input_guest=parseInt(myform.input_guest.value);
+	total1 = input_guest*250;
+	myform.total1.value=total1;
+	}
+
+
+	function nonvegT(){
+	input_guest=parseInt(myform.input_guest.value);
+	total1 = input_guest*400;
+	myform.total1.value=total1;
+	}
+
+	function wineT(){
+	input_guest=parseInt(myform.input_guest.value);
+	total2 = input_guest*400;
+	myform.total2.value=total2;
+	}
+
+	function whiskeyT(){
+	input_guest=parseInt(myform.input_guest.value);
+	total2 = input_guest*300;
+	myform.total2.value=total2;
+	}
+
+	function beerT(){
+	input_guest=parseInt(myform.input_guest.value);
+	total2 = input_guest*200;
+	myform.total2.value=total2;
+	}
+
+	function colddrinkT(){
+	input_guest=parseInt(myform.input_guest.value);
+	total2 = input_guest*100;
+	myform.total2.value=total2;
+	}
+
+	
+
+
+</script>	
+</head>
+<body>
+	<!-- banner -->
+		<div class="center-container">
+			<div class="main">
+				<h1 class="w3layouts_head">Club Party Registration Form</h1>
+					<div class="w3layouts_main_grid">
+						<form action="clubparty2.php" method="post" class="w3_form_post" name="myform">
+							<div class="w3_agileits_main_grid w3l_main_grid">
+								<span class="agileits_grid">
+									<label>Your Name </label>
+									<input type="text" name="name" placeholder="Your Name" required="">
+								</span>
+							</div>
+							<div class="w3_agileits_main_grid w3l_main_grid">
+								<span class="agileits_grid">
+									<label>Your Email </label>
+									<input type="text" name="email" placeholder="Your Email" required="">
+								</span>
+							</div>
+							<div class="w3_agileits_main_grid w3l_main_grid">
+								<span class="agileits_grid">
+									<label>Phone Number </label>
+									<input type="text" name="phone" placeholder="Phone Number" required="">
+									</span>
+							</div>
+							<div class="w3_agileits_main_grid w3l_main_grid">
+								<span class="agileits_grid">
+									<label>No.of persons </label>
+									<select   name="input_guest" required="">
+										<option value="none" selected="" disabled="">Select numbers</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+										<option value="150">150</option>
+										<option value="200">200</option>
+										<option value="250">250</option>
+										<option value="300">300</option>
+										<option value="350">350</option>
+										<option value="400">400</option>
+										<option value="450">450</option>
+										<option value="500">500</option>
+									</select>
+								</span>
+							</div>
+							<div class="agileits_w3layouts_main_grid w3ls_main_grid">
+								<span class="agileinfo_grid">
+									<label>Date / Time </label>
+									<div class="agileits_w3layouts_main_gridl">
+										<input class="date" id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="">
+									</div>
+									<div class="agileits_w3layouts_main_gridr">
+										<input type="time" name="time" placeholder=" " required="">
+									</div>
+										<div class="clear"> </div>
+								</span>
+							</div>
+						<div class="content-w3ls">
+							<div class="form-w3ls">
+								<div class="content-wthree2">
+									<div class="grid-w3layouts1">
+										<div class="w3-agile1">
+											<label>Please choose your favourite food</label>
+											<ul>
+												<li>
+													<input type="radio" id="a-option"  name="radio" value="veg" onclick="vegT()">
+													<label for="a-option">Veg </label>
+													<div class="check"></div>
+												</li>
+												<li>
+													<input type="radio" id="b-option" name="radio" value="nonveg" onclick="nonvegT()">
+													<label for="b-option">Non-veg</label>
+													<div class="check"><div class="inside"></div></div>
+												</li>
+											</ul>
+										</div>	
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="w3_agileits_main_grid w3l_main_grid">
+								<span class="agileits_grid">
+									<label> </label>
+									<input type="text" name="total1" id="total1" placeholder="Total" required="">
+									</span>
+							</div>
+							<div class="form-w3ls-1">
+								<div class="grid-w3layouts1">
+									<div class="w3-agile1">
+										<label>Please choose your favourite drink</label>
+											<ul>
+												<li>
+													<input type="radio" id="d-option" name="radio2" value="wine" onclick="wineT()">
+													<label for="d-option">Wine</label>
+													<div class="check"></div>
+												</li>
+												<li>
+													<input type="radio" id="e-option"  name="radio2" value="whiskey" onclick="whiskeyT()">
+													<label for="e-option">Whisky</label>
+													<div class="check"><div class="inside"></div></div>
+												</li>
+												<li>
+													<input type="radio" id="f-option" name="radio2" value="beer" onclick="beerT()">
+													<label for="f-option">beer </label>
+													<div class="check"><div class="inside"></div></div>
+												</li>
+												<li>
+													<input type="radio" id="g-option" name="radio2" value="colddrink" onclick="colddrinkT()">
+													<label for="g-option">Cold Drinks </label>
+													<div class="check"><div class="inside"></div></div>
+												</li>
+											</ul>
+									</div>	
+								</div>		
+							</div>
+							<div class="w3_agileits_main_grid w3l_main_grid">
+								<span class="agileits_grid">
+									<label> </label>
+									<input type="text" name="total2" id="total2" placeholder="Total" required="">
+									</span>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="w3_main_grid">
+							<div class="w3_main_grid_right">
+								<input type="submit" value="Submit" >
+							</div>
+						</div>
+					</form>
+				</div>
+			<!-- Calendar -->
+				<link rel="stylesheet" href="css/jquery-ui.css" />
+					<script src="js/jquery-ui.js"></script>
+						<script>
+							$(function() {
+								$( "#datepicker" ).datepicker();
+							});
+						</script>
+			<!-- //Calendar -->
+				<div class="w3layouts_copy_right">
+					<
+				</div>
+			</div>
+		</div>
+	<!-- //footer -->
+	</body>
+</html>

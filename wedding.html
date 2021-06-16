@@ -1,0 +1,314 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Wedding Registration</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    color: #333;
+    background: url(../images/bg1.jpg);
+    font-family: "Patua One", sans-serif;
+}
+.contact-form {
+    padding: 50px;
+    margin: 30px 0;
+}
+.contact-form h1 {
+    color: #19bc9d;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.contact-form .form-control, .contact-form .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.contact-form .form-control:focus {
+    border-color: #19bc9d;
+}
+.contact-form .btn-primary, .contact-form .btn-primary:active {
+    color: #fff;
+    min-width: 150px;
+    font-size: 16px;
+    background: #19bc9d !important;
+    border: none;
+}
+.contact-form .btn-primary:hover {
+    background: #15a487 !important; 
+}
+.contact-form .btn i {
+    margin-right: 5px;
+}
+.contact-form label {
+    opacity: 0.7;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.hint-text {
+    font-size: 15px;
+    padding-bottom: 20px;
+    opacity: 0.6;
+}
+.box{
+    display: none;
+}
+#silver{
+    display: none;
+}
+#gold{
+    display: none;
+}
+#diamond{
+    display: none;
+}
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+</style>
+<script>
+    /* RADIO BUTTON DETAILS*/
+    function plansilver(x)
+    {
+        if (x==0)
+        document.getElementById('silver').style.display='block'
+        else
+        document.getElementById('silver').style.display='none';
+        return;
+    }
+
+    function plangold(x)
+    {
+        if (x==1)
+        document.getElementById('gold').style.display='block'
+        else
+        document.getElementById('gold').style.display='none';
+        return;
+    }
+
+    function plandiamond(x)
+    {
+        if (x==2)
+        document.getElementById('diamond').style.display='block'
+        else
+        document.getElementById('diamond').style.display='none';
+        return;
+    }
+
+    /*calculating customers total*/
+
+    function silvertotal()
+    {
+        var s=document.getElementById("inputGuest").value;
+
+        var total1=s*300;
+        document.getElementById("inputTotal").innerHTML="Your total is Rs25000(Silver Dcoration)+Rs"+total1;
+    }
+
+    function goldtotal()
+    {
+        var g=document.getElementById("inputGuest").value;
+
+        var total2=g*450;
+        document.getElementById("inputTotal").innerHTML="Your total is Rs30000(Gold Dcoration)+Rs"+total2;
+    }
+
+    function diamondtotal()
+    {
+        var d=document.getElementById("inputGuest").value;
+
+        var total3=d*800;
+        document.getElementById("inputTotal").innerHTML="Your total is Rs40000(Diamond Dcoration)+Rs"+total3;
+    }
+
+
+
+    
+            
+        
+</script>
+        
+</head>
+<body>
+<div class="container-lg">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="contact-form">
+                <h1>WEDDING PLANING</h1>
+                <p class="hint-text">WE THANK YOU FOR CHOOSING US</p>       
+                <form action="wedding.php" method="POST" onsubmit=" return myFun()" name=myForm>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputName">BRIDE'S Name</label>
+                                <input type="text" name="bname" class="form-control" id="inputName" required>
+                            </div>
+                        </div>                
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputName">GROOM'S NAME</label>
+                                <input type="text" name="gname" class="form-control" id="inputName" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputPhone">Phone</label>
+                                <input type="text" name="phone" class="form-control" id="inputPhone" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="inputName">Email</label>
+                                <input type="text" name="email" class="form-control" id="email" required>
+                                
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="form-group">
+                        <label for="inputGuest">NUMBER OF GUEST</label>
+                        <input type="text" name="inputguest" class="form-control" id="inputGuest" required>
+                    </div>
+
+                    <div class="fprm-group">
+                        <div class="radio_radio">
+                            <label for="inputPlan">CHOOSE A PLAN</label><br>
+                            <label class="container">Silver
+                                <input type="radio"  name="radio" value="silver" onclick="plansilver(0);plangold(0);plandiamond(1);silvertotal()"  required >
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Gold
+                                <input type="radio" name="radio" value="gold" onclick="plangold(1); plansilver(1);plandiamond(1);goldtotal()" required>
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Diamond
+                                <input type="radio" name="radio" value="diamond" onclick="plandiamond(2); plansilver(1); plangold(0);diamondtotal()" required>
+                                <span class="checkmark"></span>
+                              </label>
+
+                                <span id="silver"><font face="bedrock"><b>SILVER PLAN:</b><br>
+                                                    COST/PLATE:<b>RS 300(WITH STARTERS)</b><br>
+                                                    SILVER DECORATION(Contact agent for Enquiry)<br>
+                                                    CAPACITY OF 500 GUESTS<br>
+                                                  </font></span>
+                                <span id="gold"><font face="bedrock"><b>GOLD PLAN:</b><br>
+                                                   COST/PLATE:<b>RS 450(With Starters)</b><br>
+                                                   GOLD DECORATION(Contact Agent for Enquiry)<br>
+                                                   CAPACITY OF 800 GUESTS<br>
+                                                </font></span>
+                                <span id="diamond"><font face="bedrock"><b>DIAMOND PLAN:</b><br>
+                                                      COST/PLATE:<b>RS 800(With Starters)</b><br>
+                                                      DIAMOND DECORATION(Contact agent for Enquiry)<br>
+                                                      CAPACITY (AS PER CLIENTS REQUIREMENT)<br>
+                                                    </font></span>
+                                
+                               
+                        </div>    
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputTotal">TOTAL</label>
+                        <textarea class="form-control" name="total" id="inputTotal" rows="5" required></textarea>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary" name="btn_submit"><i class="fa fa-paper-plane"></i> Send</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function myFun(){
+        var a = document.myForm.email.value;
+        
+        if(a.indexOf('@')<=0){
+            document.getElementById("messege").innerHTML="Enter Valid email";
+            return false;
+
+        }
+        if((a.charAt(a.length-4)!='.') && (a.charAt(a.length-3)!='.')){
+            document.getElementById("messege").innerHTML="Enter Valid email";
+            return false;
+        }
+        
+}
+
+
+</script>
+
+
+</body>
+</html>
